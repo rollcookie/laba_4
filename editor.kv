@@ -1,0 +1,45 @@
+#:kivy 1.1.0
+
+Root:
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'x1:'
+        IntegerInput:
+            multiline : False
+            on_text_validate : root.on_enter1(self.text)
+        Label:
+            text: 'y1:'
+        IntegerInput:
+            multiline : False
+            on_text_validate : root.on_enter2(self.text)
+        Label:
+            text: 'x2:'
+        IntegerInput:
+            multiline : False
+            on_text_validate : root.on_enter3(self.text)
+        Label:
+            text: 'y2:'
+        IntegerInput:
+            multiline : False
+            on_text_validate : root.on_enter4(self.text)
+        Label:
+            text: 'radius:'
+        IntegerInput:
+            multiline : False
+            on_text_validate : root.on_enter5(self.text)
+        Button:
+            text: 'Iterations method'
+            on_release: root.it_method()
+
+        Button:
+            text: 'DDA line method'
+            on_release: root.dda_method()
+
+        Button:
+            text: 'Brethenhem method'
+            on_release: root.bresenham()
+
+        Button:
+            text: 'Brethenhem method for circles'
+            on_release: root.bre_method_circle()
